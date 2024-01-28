@@ -11,7 +11,7 @@ const HomeInfo = ({ currentStage }) => {
     return (
       <h1 className='sm:text-xl sm:leading-snug text-center py-4 px-8 text-black mx-5' style={commonStyle}>
         Hi, I'm
-        <span className='font-semibold mx-2 text-black'>Adrian</span>
+        <span className='font-semibold mx-2 text-black'>Gaurav</span>
         👋
         <br />
         A Software Engineer from Croatia 🇭🇷
