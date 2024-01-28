@@ -31,8 +31,10 @@ const Home = () => {
 
     // If screen width is less than 768px, adjust the scale and position
     if (window.innerWidth < 768) {
-      screenScale = [0.3, 0.3, 0.3];
-      screenPosition = [0, -2.5, 0];
+      // screenScale = [0.3, 0.3, 0.3];
+      // screenPosition = [0, -2.5, 0];
+      screenScale = [0.02, 0.03, 0.02];
+      screenPosition = [0, 0.35, 2.65];
     } else {
       screenScale = [0.02, 0.03, 0.02];
       screenPosition = [0, 0.35, 2.65];
@@ -45,8 +47,10 @@ const Home = () => {
     let screenScale, screenPosition;
 
     if (window.innerWidth < 768) {
-      screenScale = [0.9, 0.9, 0.9];
-      screenPosition = [0, -6.5, -43.4];
+      // screenScale = [0.9, 0.9, 0.9];
+      // screenPosition = [0, -6.5, -43.4];
+      screenScale = [1, 1, 1];
+      screenPosition = [0.12, 0.32, -0.4];
     } else {
       screenScale = [1, 1, 1];
       screenPosition = [0.12, 0.32, -0.4];
@@ -60,7 +64,7 @@ const Home = () => {
 
   return (
     <section className='w-full h-screen relative'>
-      <div className='absolute top-28 left-0 right-0 z-10 flex items-center justify-center'>
+      <div className='absolute bottom-24 left-10 z-10 flex items-center justify-center'>
         {currentStage && <HomeInfo currentStage={currentStage} />}
       </div>
 
