@@ -140,17 +140,20 @@ export function BlackIsland({
 
       // Set the current stage based on the island's orientation
       switch (true) {
-        case normalizedRotation >= 5.45 && normalizedRotation <= 5.85:
+        case normalizedRotation >= 3.8 && normalizedRotation <= 4.2:
+          setCurrentStage(1);
+          break;
+        case normalizedRotation >= 2.7 && normalizedRotation <= 3.2:
+            setCurrentStage(2);
+            break;
+        case normalizedRotation >= 0.9 && normalizedRotation <= 1.9:
+              setCurrentStage(3);
+              break;
+        case normalizedRotation >= 5.8 && normalizedRotation <= 6.2:
           setCurrentStage(4);
           break;
-        case normalizedRotation >= 0.85 && normalizedRotation <= 1.3:
-          setCurrentStage(3);
-          break;
-        case normalizedRotation >= 2.4 && normalizedRotation <= 2.6:
-          setCurrentStage(2);
-          break;
-        case normalizedRotation >= 4.25 && normalizedRotation <= 4.75:
-          setCurrentStage(1);
+        case normalizedRotation >= 4.8 && normalizedRotation <= 5.2:
+          setCurrentStage(5);
           break;
         default:
           setCurrentStage(null);

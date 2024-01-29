@@ -182,6 +182,7 @@ export const socialLinks = [
     }
 ];
 
+
 export const projects = [
     {
       name: "Car Rent",
@@ -247,3 +248,37 @@ export const projects = [
       source_code_link: "https://github.com/",
     },
   ];
+
+  export const homeStagesInfo = [
+    
+    {
+        title : " 1 Hi,I'm Gaurav, A Full Stack developer from India",
+        ctaText : "",
+        link : "",
+    },
+    {
+      title : "2 My skills mostly are in Frontend dev,Including Flutter,Android and React",
+      ctaText : "",
+      link : "",
+    }
+    ,
+    {
+      title : "3 I am currently working in a fintech based startup Nuclei as a Full Stack Developer",
+      ctaText : "See Experience",
+      link : "/experience",
+    }
+    ,
+    {
+      title : "4 I have build some of cooll project from scrath check them out.",
+      ctaText : "See Projects",
+      link : "/projects",
+    }
+    ,
+    {
+      title : "5 You can reach out to for building some great stuff together",
+      ctaText : "Contact Me",
+      link : "/contact",
+    }
+  
+  ]
+  
