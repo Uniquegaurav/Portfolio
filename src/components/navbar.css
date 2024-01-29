@@ -1,0 +1,18 @@
+.header {
+  display: flex;
+  justify-content: flex-end; /* Align items to the right */
+  padding: 10px; /* Adjust padding as needed */
+  width: 100%; /* Ensure header takes up the full width */
+}
+
+.logo-container {
+  margin-left: auto; /* Automatically takes up available space to push to the right */
+}
+
+.logo {
+  transition: transform 0.5s ease-in-out;
+}
+
+.logo:hover {
+  transform: scale(1.1) rotate(360deg);
+}
