@@ -252,30 +252,30 @@ export const projects = [
   export const homeStagesInfo = [
     
     {
-        title : " 1 Hi,I'm Gaurav, A Full Stack developer from India",
+        title : "Hi,I'm Gaurav, A Software Developer with Quick Learning Ability and a Passion of Creating New Things.",
         ctaText : "",
         link : "",
     },
     {
-      title : "2 My skills mostly are in Frontend dev,Including Flutter,Android and React",
-      ctaText : "",
-      link : "",
+      title : "I Specialize in Frontend Development with Expertise in Flutter, Android, and React JS.",
+      ctaText : "See Skills",
+      link : "/about",
     }
     ,
     {
-      title : "3 I am currently working in a fintech based startup Nuclei as a Full Stack Developer",
+      title : "I am Currently Working as a Full Stack Developer at Nuclei and Building a Credit Card SDK.",
       ctaText : "See Experience",
-      link : "/experience",
+      link : "/about",
     }
     ,
     {
-      title : "4 I have build some of cooll project from scrath check them out.",
+      title : "Built Coders League Platform entirely from the ground up, and it's actively utilized by users.",
       ctaText : "See Projects",
       link : "/projects",
     }
     ,
     {
-      title : "5 You can reach out to for building some great stuff together",
+      title : "Interested in Hiring me? or Collaborating on a Project? Feel Free To Reach Out.",
       ctaText : "Contact Me",
       link : "/contact",
     }
