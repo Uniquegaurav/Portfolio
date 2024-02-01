@@ -1,5 +1,5 @@
 import React, { useRef ,useEffect} from "react";
-import { useGLTF, useAnimations } from "@react-three/drei";
+import { useGLTF, useAnimations,OrbitControls, Preload, } from "@react-three/drei";
 import scene from '../assets/3d/stylized_planet.glb';
 
 export function Earth({currentAnimation, ...props }) {
@@ -7,15 +7,15 @@ export function Earth({currentAnimation, ...props }) {
   const { nodes, materials, animations } = useGLTF(scene);
   const { actions } = useAnimations(animations, group);
   useEffect(() => {
-    Object.values(actions).forEach((action) => action.stop());
+    // Object.values(actions).forEach((action) => action.stop());
 
-    if (actions[currentAnimation]) {
-      actions[currentAnimation].play();
-    }
+    // if (actions[currentAnimation]) {
+    //   actions[currentAnimation].play();
+    // }
   }, [actions, currentAnimation]);
 
   return (
-    <group ref={group} {...props} dispose={null} scale={2.2}>
+    <group ref={group} {...props} dispose={null} scale={2.2}  position-y={0} rotation-y={0}>
       <group name="Sketchfab_Scene">
         <group name="Sketchfab_model" rotation={[-1.54, -0.064, 0]}>
           <group name="root">

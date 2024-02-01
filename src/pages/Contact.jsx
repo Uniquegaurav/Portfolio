@@ -1,12 +1,14 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState ,Suspense} from "react";
 import { Canvas } from "@react-three/fiber";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
+import { useGLTF, useAnimations,OrbitControls, Preload, } from "@react-three/drei";
 
 import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
-import { Earth } from "../models";
+import {CanvasLoader} from "../components";
+import { Earth ,Bird} from "../models";
 
 const Contact = () => {
   const formRef = useRef();
@@ -28,9 +30,6 @@ const Contact = () => {
     });
   };
 
-  // template_2any6sq
-  //service_nazsit9
-  // yc8oXrZwyNUilzhXu
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
@@ -70,11 +69,11 @@ const Contact = () => {
 
   return (
     <div
-      className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden`}
+      className={`xl:mt-8 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden`}
     >
       <motion.div
         variants={slideIn("left", "tween", 0.2, 1)}
-        className='flex-[0.75] bg-black-100 p-8 rounded-2xl'
+        className='flex-[0.75] bg-black-100 p-8 rounded-2xl '
       >
         <p className={styles.sectionSubText}>Get in touch</p>
         <h3 className={styles.sectionHeadText}>Contact.</h3>
@@ -82,7 +81,7 @@ const Contact = () => {
         <form
           ref={formRef}
           onSubmit={handleSubmit}
-          className='mt-12 flex flex-col gap-8'
+          className='mt-6 flex flex-col gap-6'
         >
           <label className='flex flex-col'>
             <span className='text-black font-medium mb-4'>Your Name</span>
@@ -109,7 +108,7 @@ const Contact = () => {
           <label className='flex flex-col'>
             <span className='text-black font-medium mb-4'>Your Message</span>
             <textarea
-              rows={7}
+              rows={4}
               name='message'
               value={form.message}
               onChange={handleChange}
@@ -131,9 +130,30 @@ const Contact = () => {
         variants={slideIn("right", "tween", 0.2, 1)}
         className='xl:flex-1 xl:h-auto md:h-[550px] h-[350px]'
       >
-        <Canvas>
+     <Canvas
+      shadows
+      frameloop='demand'
+      dpr={[1, 2]}
+      gl={{ preserveDrawingBuffer: true }}
+      camera={{
+        fov: 45,
+        near: 0.1,
+        far: 200,
+        position: [-4, 3, 6],
+      }}
+    > 
+    {/* <Bird /> */}
+      <Suspense fallback={<CanvasLoader />}>
+        <OrbitControls
+          autoRotate
+          enableZoom={false}
+          maxPolarAngle={Math.PI / 2}
+          minPolarAngle={Math.PI / 2}
+        />
         <Earth />
-        </Canvas>
+        <Preload all />
+      </Suspense>
+    </Canvas>
       </motion.div>
     </div>
   );

@@ -10,6 +10,7 @@ import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 import { motion } from "framer-motion";
+import { CTA } from "../components";
 
 const ProjectCard = ({
   index,
@@ -96,6 +97,8 @@ const Projects = () => {
           <ProjectCard key={`project-${index}`} index={index} {...project} />
         ))}
       </div>
+      <hr className='border-slate-200' />
+      <CTA />
     </>
   );
 };
