@@ -19,6 +19,13 @@
   padding-left: 5%;
  
 }
+.navbar-container-home {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: auto;
+ 
+}
 
 .logo-container {
   margin-left: auto;

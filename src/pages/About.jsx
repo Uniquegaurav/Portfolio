@@ -5,10 +5,68 @@ import {
 
 import { CTA } from "../components";
 import { experiences, skills } from "../constants";
+import { motion,useAnimation } from "framer-motion";
+import { useEffect } from "react";
 
 import "react-vertical-timeline-component/style.min.css";
 
+
+
 const About = () => {
+
+  const controls = useAnimation();
+  useEffect(() => {
+    controls.start({
+      x: 0,
+      y: 0,
+      rotate: 1,
+      opacity: 1,
+      transition: { duration: 1.2, ease: "easeOut" },
+    });
+  }, [controls]);
+
+  const skillsList = skills.map((skill, index) => (
+    <motion.div
+      key={skill.name}
+      animate={controls}
+      initial={{
+        x: Math.random() * window.innerWidth - 200,
+        y: Math.random() * window.innerHeight - 200,
+        opacity: 0,
+      }}
+      transition={{ delay: index * 0.1 }}
+      drag
+      className='block-container w-20 h-20 relative'
+    >
+      <div className='btn-back rounded-xl' />
+      <div className='btn-front rounded-xl flex justify-center items-center'>
+        <img
+          src={skill.imageUrl}
+          alt={skill.name}
+          className='w-1/2 h-1/2 object-contain'
+        />
+        <motion.div
+          className='absolute inset-0 flex items-center justify-center text-black font-semibold text-center opacity-0 bg-black bg-opacity-0 transition-opacity duration-300'
+          whileHover={{ opacity: 0.7 }}
+        >
+          {skill.name}
+        </motion.div>
+      </div>
+    </motion.div>
+  ));
+  
+
+  const skillsSection1 = skillsList.slice(0, Math.ceil(skillsList.length / 3));
+  const skillsSection2 = skillsList.slice(
+    Math.ceil(skillsList.length / 3),
+    Math.ceil((2 * skillsList.length) / 3)
+  );
+  const skillsSection3 = skillsList.slice(
+    Math.ceil((2 * skillsList.length) / 3),
+    skillsList.length
+  );
+
+
   return (
     <section className='max-container'>
       <h1 className='head-text'>
@@ -21,6 +79,13 @@ const About = () => {
           education through hands-on learning and building applications.
         </p>
       </div>
+
+
+      <div>
+      <div className='mt-16 flex flex-wrap gap-12'>{skillsSection1}</div>
+      <div className='mt-16 flex flex-wrap gap-12'>{skillsSection2}</div>
+      <div className='mt-16 flex flex-wrap gap-12'>{skillsSection3}</div>
+    </div>
 
       <div className='py-16'>
         <h3 className='subhead-text'>Work Experience.</h3>
@@ -82,28 +147,9 @@ const About = () => {
         </div>
       </div>
 
-      <div className='py-10 flex flex-col'>
-        <h3 className='subhead-text'>My Skills</h3>
-
-        <div className='mt-16 flex flex-wrap gap-12'>
-          {skills.map((skill) => (
-            <div className='block-container w-20 h-20' key={skill.name}>
-              <div className='btn-back rounded-xl' />
-              <div className='btn-front rounded-xl flex justify-center items-center'>
-                <img
-                  src={skill.imageUrl}
-                  alt={skill.name}
-                  className='w-1/2 h-1/2 object-contain'
-                />
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      <hr className='border-slate-200' />
     </section>
   );
 };
+
 
 export default About;

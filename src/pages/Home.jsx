@@ -2,7 +2,7 @@ import { Canvas } from "@react-three/fiber";
 import { Suspense, useEffect, useRef, useState } from "react";
 
 import sakura from "../assets/sakura.mp3";
-import { HomeInfo, Loader } from "../components";
+import { HomeInfo, CanvasLoader } from "../components";
 import { soundoff, soundon } from "../assets/icons";
 import { Bird, BlackIsland, Dragon, Winter,Earth } from "../models";
 
@@ -63,6 +63,7 @@ const Home = () => {
 
   return (
     <section className='w-full h-screen relative'>
+            <Suspense fallback={<Canvas><CanvasLoader /> </Canvas> }>
       <div className='absolute bottom-24 left-10 z-10 flex items-center justify-center'>
         {currentStage && <HomeInfo currentStage={currentStage} />}
       </div>
@@ -73,7 +74,7 @@ const Home = () => {
         }`}
         camera={{ near: 0.1, far: 1000 }}
       >
-        <Suspense fallback={<Loader />}>
+  
           <directionalLight position={[1, 1, 1]} intensity={4} />
           <ambientLight intensity={2.1} />
           <pointLight position={[9, 6, 10]} intensity={4} />
@@ -105,8 +106,9 @@ const Home = () => {
             rotation={[0, 1.7, 0]}
             scale={biplaneScale}
           />
-        </Suspense>
+     
       </Canvas>
+      </Suspense>
 
       <div className='absolute bottom-2 left-2'>
         <img

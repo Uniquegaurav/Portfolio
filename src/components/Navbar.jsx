@@ -1,37 +1,38 @@
-// Navbar.jsx
-
 import React, { useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import { gauravLogo } from "../assets/images";
 import "./navbar.css";
+import { motion } from "framer-motion";
 
 const Navbar = () => {
-  const location = useLocation();
+  const { pathname } = useLocation();
+  const isNotHomePage = pathname !== "/";
   const [showMenu, setShowMenu] = useState(false);
 
   const toggleMenu = () => {
     setShowMenu(!showMenu);
   };
-
+  
+  
   return (
     <header className={`header ${showMenu ? "show-menu" : ""}`}>
-      <div className="navbar-container">
-      {location.pathname !== "/" && ( 
+      <div className={isNotHomePage ? "navbar-container" : "navbar-container-home"}>
+        {isNotHomePage && (
           <div className={`menu-icon ${showMenu ? "active" : ""}`} onClick={toggleMenu}>
             <div className="bar"></div>
             <div className="bar"></div>
             <div className="bar"></div>
           </div>
         )}
-        {location.pathname !== "/" && (
-          <nav className={`nav-links ${showMenu ? "show" : ""}`}>
+        {isNotHomePage && (
+          <motion.nav className={`nav-links ${showMenu ? "show" : ""}`}>
             <NavLink to="/about">About</NavLink>
             <NavLink to="/projects">Projects</NavLink>
             <NavLink to="/contact">Contact</NavLink>
-          </nav>
+          </motion.nav>
         )}
         <div className="logo-container">
-          <NavLink to={location.pathname !== "/" ? "/" : "/about"}>
+          <NavLink to={isNotHomePage ? "/" : "/about"}>
             <img
               src={gauravLogo}
               alt="logo"
