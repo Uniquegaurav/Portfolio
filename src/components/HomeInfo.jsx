@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { arrow } from "../assets/icons";
 import { homeStagesInfo } from "../constants";
 import 'animate.css'; // Import animate.css styles
-import { motion } from "framer-motion";
+
 
 const HomeInfo = ({ currentStage }) => {
   const commonStyle = {
