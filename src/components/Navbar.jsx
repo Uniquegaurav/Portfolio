@@ -4,6 +4,7 @@ import { gauravLogo } from "../assets/images";
 import "./navbar.css";
 import { motion } from "framer-motion";
 
+
 const Navbar = () => {
   const { pathname } = useLocation();
   const isNotHomePage = pathname !== "/";

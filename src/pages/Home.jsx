@@ -11,14 +11,12 @@ const Home = () => {
   const audioRef = useRef(new Audio(sakura));
   audioRef.current.volume = 0.4;
   audioRef.current.loop = true;
-  
+
   const [currentStage, setCurrentStage] = useState(0);
   const [isRotating, setIsRotating] = useState(false);
   const [isPlayingMusic, setIsPlayingMusic] = useState(false);
   const [showPopup, setShowPopup] = useState(false);
   const navigate = useNavigate();
-  
-
 
   useEffect(() => {
     const shouldShowPopup = !localStorage.getItem("popupAlreadyShown");
@@ -37,31 +35,24 @@ const Home = () => {
     };
   }, [isPlayingMusic]);
 
-
-
   const handleSeeHome = () => {
     setCurrentStage(1);
     localStorage.setItem("popupAlreadyShown", "true");
     setShowPopup(false);
-
   };
 
   const handleJumpToAbout = () => {
     localStorage.setItem("popupAlreadyShown", "true");
     setShowPopup(false);
     navigate("/about");
-  
   };
 
   const adjustBiplaneForScreenSize = () => {
     let screenScale, screenPosition;
 
-    // If screen width is less than 768px, adjust the scale and position
     if (window.innerWidth < 768) {
-      // screenScale = [0.3, 0.3, 0.3];
-      // screenPosition = [0, -2.5, 0];
       screenScale = [0.02, 0.03, 0.02];
-      screenPosition = [0, 0.35, 2.65];
+      screenPosition = [0, 0.23, 2.25];
     } else {
       screenScale = [0.02, 0.03, 0.02];
       screenPosition = [0, 0.35, 2.65];
@@ -74,10 +65,8 @@ const Home = () => {
     let screenScale, screenPosition;
 
     if (window.innerWidth < 768) {
-      // screenScale = [0.9, 0.9, 0.9];
-      // screenPosition = [0, -6.5, -43.4];
-      screenScale = [1, 1, 1];
-      screenPosition = [0.12, 0.32, -0.4];
+      screenScale = [0.9, 0.9, 0.9];
+      screenPosition = [0, 0.31, -0.6];
     } else {
       screenScale = [1, 1, 1];
       screenPosition = [0.12, 0.32, -0.4];
@@ -90,7 +79,7 @@ const Home = () => {
   const [islandScale, islandPosition] = adjustIslandForScreenSize();
 
   return (
-    <section className="w-full h-screen relative">
+    <section style={{overflow:"hidden"}} className="w-full h-screen relative">
       <Suspense
         fallback={
           <Canvas>
@@ -106,10 +95,11 @@ const Home = () => {
           />
         )}
         <div className="absolute bottom-24 left-10 z-10 flex items-center justify-center">
-          {currentStage && <HomeInfo currentStage={currentStage} />}
+          {currentStage>0 && <HomeInfo currentStage={currentStage} />}
         </div>
 
         <Canvas
+         style={{overflow:"hidden"}}
           className={`w-full h-screen bg-transparent ${
             isRotating ? "cursor-grabbing" : "cursor-grab"
           }`}
@@ -154,7 +144,7 @@ const Home = () => {
           src={!isPlayingMusic ? soundoff : soundon}
           alt="jukebox"
           onClick={() => setIsPlayingMusic(!isPlayingMusic)}
-          className="w-10 h-10 cursor-pointer object-contain"
+          className="w-10 bg h-10 cursor-pointer object-contain"
         />
       </div>
     </section>

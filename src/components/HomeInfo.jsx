@@ -25,7 +25,7 @@ const HomeInfo = ({ currentStage }) => {
   };
 
   const ctaBackgroundStyle ={
-    backgroundColor: 'rgba(173, 216, 230, 0.3)', 
+    backgroundColor: 'rgba(173, 216, 230, 0.7)', 
     backdropFilter: 'blur(3px)', 
     color: '#000' 
   }
