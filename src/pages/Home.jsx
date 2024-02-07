@@ -6,6 +6,7 @@ import { HomeInfo, Loader, Popup } from "../components";
 import { soundoff, soundon } from "../assets/icons";
 import { Bird, BlackIsland, Dragon, Winter, Earth } from "../models";
 import { useNavigate } from "react-router-dom";
+import { useLocation } from 'react-router-dom';
 
 const Home = () => {
   const audioRef = useRef(new Audio(sakura));
@@ -17,6 +18,7 @@ const Home = () => {
   const [isPlayingMusic, setIsPlayingMusic] = useState(false);
   const [showPopup, setShowPopup] = useState(false);
   const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const shouldShowPopup = !localStorage.getItem("popupAlreadyShown");
@@ -24,7 +26,20 @@ const Home = () => {
       setShowPopup(true);
     }
   }, []);
-
+  
+  useEffect(() => {
+    if (location.pathname === '/') {
+      document.body.style.overflow = 'hidden';
+      document.documentElement.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = ''; 
+      document.documentElement.style.overflow = ''; 
+    }
+    return () => {
+      document.body.style.overflow = ''; 
+      document.documentElement.style.overflow = '';
+    };
+  }, [location.pathname]);
   useEffect(() => {
     if (isPlayingMusic) {
       audioRef.current.play();

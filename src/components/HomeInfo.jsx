@@ -25,7 +25,7 @@ const HomeInfo = ({ currentStage }) => {
   };
 
   const ctaBackgroundStyle ={
-    backgroundColor: 'rgba(173, 216, 230, 0.7)', 
+    backgroundColor: 'rgba(173, 216, 230, 0.3)', 
     backdropFilter: 'blur(3px)', 
     color: '#000' 
   }
@@ -46,7 +46,7 @@ const HomeInfo = ({ currentStage }) => {
       </h1>
       <Link
         to={homeStagesInfo[currentStage - 1].link}
-        className='mt-4 neo-btn inline-flex items-center border border-black p-2 rounded-m'
+        className='mt- neo-btn inline-flex items-center border border-black p-2 rounded-m'
         style={ctaBackgroundStyle}
       >
         {homeStagesInfo[currentStage - 1].ctaText}

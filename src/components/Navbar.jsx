@@ -27,9 +27,9 @@ const Navbar = () => {
         )}
         {isNotHomePage && (
           <motion.nav className={`nav-links ${showMenu ? "show" : ""}`}>
-            <NavLink to="/about">About</NavLink>
-            <NavLink to="/projects">Projects</NavLink>
-            <NavLink to="/contact">Contact</NavLink>
+            <NavLink onClick={toggleMenu} to="/about">About</NavLink>
+            <NavLink onClick={toggleMenu} to="/projects">Projects</NavLink>
+            <NavLink onClick={toggleMenu} to="/contact">Contact</NavLink>
           </motion.nav>
         )}
         <div className="logo-container">
