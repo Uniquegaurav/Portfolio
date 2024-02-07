@@ -3,10 +3,12 @@ import { Link } from "react-router-dom";
 import { arrow } from "../assets/icons";
 import { homeStagesInfo } from "../constants";
 import 'animate.css'; // Import animate.css styles
+import { useMediaQuery } from 'react-responsive'
 
 
 const HomeInfo = ({ currentStage }) => {
-  const commonStyle = {
+  const isMobile = useMediaQuery({ query: '(max-width: 768px)' })
+  const desktopStyle = {
     backgroundColor: 'rgba(173, 216, 230, 0.3)', 
     backdropFilter: 'blur(3px)', 
     border: '1px solid rgba(255, 255, 255, 0.2)', 
@@ -16,6 +18,19 @@ const HomeInfo = ({ currentStage }) => {
     padding: '10px',
     borderRadius: '10px',
   };
+  const phoneStyle = {
+    width: "310px", 
+    height: '180px',
+    padding: '5px',
+  };
+
+  const ctaBackgroundStyle ={
+    backgroundColor: 'rgba(173, 216, 230, 0.3)', 
+    backdropFilter: 'blur(3px)', 
+    color: '#000' 
+  }
+  const commonStyle = isMobile ? { ...desktopStyle, ...phoneStyle } : desktopStyle;
+
 
   return (
     homeStagesInfo[currentStage - 1].ctaText.length === 0 ? (
@@ -32,7 +47,7 @@ const HomeInfo = ({ currentStage }) => {
       <Link
         to={homeStagesInfo[currentStage - 1].link}
         className='mt-4 neo-btn inline-flex items-center border border-black p-2 rounded-m'
-        style={{ color: '#000' }}
+        style={ctaBackgroundStyle}
       >
         {homeStagesInfo[currentStage - 1].ctaText}
         <div src={arrow} alt='arrow' className='no w-4 h-4 ml-2 object-contain' style={{ filter: 'invert(1)'}} />
