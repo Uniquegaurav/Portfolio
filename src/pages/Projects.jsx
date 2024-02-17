@@ -1,8 +1,3 @@
-// import { Link } from "react-router-dom";
-
-// import { CTA } from "../components";
-// import { projects } from "../constants";
-// import { arrow } from "../assets/icons";
 import {Tilt} from "react-tilt";
 import { styles } from "../styles";
 import { github } from "../assets/icons";
@@ -73,10 +68,10 @@ const ProjectCard = ({
 
 const Projects = () => {
   return (
-    <>
+    <div className="mt-12">
       <motion.div variants={textVariant()}>
         <p className={`${styles.sectionSubText} `}>My work</p>
-        <h2 className={`${styles.sectionHeadText}`}>Projects.</h2>
+        <h2 className={`${styles.sectionHeadTextAbout}`}>Projects.</h2>
       </motion.div>
 
       <div className='w-full flex'>
@@ -99,7 +94,7 @@ const Projects = () => {
       </div>
       <hr className='border-slate-200' />
       <CTA />
-    </>
+    </div>
   );
 };
 

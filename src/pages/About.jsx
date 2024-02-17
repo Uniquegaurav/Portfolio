@@ -7,8 +7,11 @@ import { CTA } from "../components";
 import { experiences, skills } from "../constants";
 import { motion,useAnimation } from "framer-motion";
 import { useEffect } from "react";
+import { fadeIn, textVariant } from "../utils/motion";
+import { styles } from "../styles";
 
 import "react-vertical-timeline-component/style.min.css";
+import { SectionWrapper } from "../hoc";
 
 
 
@@ -68,10 +71,11 @@ const About = () => {
 
 
   return (
-    <section className='max-container'>
-      <h1 className='head-text'>
-        Hello, I'm Gaurav
-      </h1>
+    <div className="mt-12">
+       <motion.div variants={textVariant()}>
+        <p className={`${styles.sectionSubText} `}>About Me</p>
+        <h2 className={`${styles.sectionHeadTextAbout}`}> Hello, I'm Gaurav.</h2>
+      </motion.div>
 
       <div className='mt-5 flex flex-col gap-3 text-slate-500'>
         <p>
@@ -147,9 +151,9 @@ const About = () => {
         </div>
       </div>
 
-    </section>
+    </div>
   );
 };
 
 
-export default About;
+export default SectionWrapper(About,"");

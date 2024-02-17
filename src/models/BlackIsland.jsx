@@ -139,22 +139,24 @@ export function BlackIsland({
         ((rotation % (2 * Math.PI)) + 2 * Math.PI) % (2 * Math.PI);
 
       // Set the current stage based on the island's orientation
+    
       switch (true) {
-        case normalizedRotation >= 3.8 && normalizedRotation <= 4.2:
+        case normalizedRotation >= 1.6 && normalizedRotation <= 2.1:
+          setCurrentStage(3);
+          break;
+        case normalizedRotation >= 2.8 && normalizedRotation <= 3.2:
+          setCurrentStage(2);
+          break;
+        case normalizedRotation >= 3.9 && normalizedRotation <= 4.4:
           setCurrentStage(1);
           break;
-        case normalizedRotation >= 2.7 && normalizedRotation <= 3.2:
-            setCurrentStage(2);
-            break;
-        case normalizedRotation >= 0.9 && normalizedRotation <= 1.9:
-              setCurrentStage(3);
-              break;
-        case normalizedRotation >= 5.8 && normalizedRotation <= 6.2:
-          setCurrentStage(4);
-          break;
-        case normalizedRotation >= 4.8 && normalizedRotation <= 5.2:
+        case normalizedRotation >= 4.9 && normalizedRotation <= 5.4:
           setCurrentStage(5);
           break;
+        case normalizedRotation >= 5.8 || normalizedRotation <= 0.4:
+          setCurrentStage(4);
+          break;
+
         default:
           setCurrentStage(null);
       }
@@ -164,7 +166,7 @@ export function BlackIsland({
   return (
     // {Island 3D model from: https://sketchfab.com/3d-models/foxs-islands-163b68e09fcc47618450150be7785907}
     <a.group ref={islandRef} {...props}>
-        <mesh
+      <mesh
         castShadow
         receiveShadow
         geometry={nodes.polySurface63_lambert1_0.geometry}

@@ -67,10 +67,12 @@ const Home = () => {
 
     if (window.innerWidth < 768) {
       screenScale = [0.02, 0.03, 0.02];
-      screenPosition = [0, 0.23, 2.25];
+      screenPosition = [0, 0.33, 2.25];
     } else {
       screenScale = [0.02, 0.03, 0.02];
-      screenPosition = [0, 0.35, 2.65];
+      screenPosition = [0, 0.45, 2.65];
+        //keep dragon directly on top of rocks
+      // screenPosition = [0, -0.05, 4.85];
     }
 
     return [screenScale, screenPosition];
@@ -120,14 +122,14 @@ const Home = () => {
           }`}
           camera={{ near: 0.1, far: 1000 }}
         >
-          <directionalLight position={[1, 1, 1]} intensity={4} />
-          <ambientLight intensity={2.1} />
-          <pointLight position={[9, 6, 10]} intensity={4} />
+          <directionalLight position={[1.8, 1.2, 1.7]} intensity={4} />
+          <ambientLight intensity={1.7} />
+          <pointLight position={[0.8, 0.7, 0.5]} intesity={3} />
           <spotLight
-            position={[10, 12, 10]}
-            angle={0.15}
-            penumbra={1}
-            intensity={2}
+            position={[4, 2, 2]}
+            angle={0.25}
+            penumbra={2}
+            intensity={4}
           />
           <hemisphereLight
             skyColor="#b1e1ff"
@@ -148,7 +150,7 @@ const Home = () => {
           <Dragon
             isRotating={isRotating}
             position={biplanePosition}
-            rotation={[0, 1.7, 0]}
+            rotation={[0.6, 1.7, 0]}
             scale={biplaneScale}
           />
         </Canvas>

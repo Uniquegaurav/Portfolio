@@ -8,18 +8,13 @@ export function Dragon({isRotating, ...props }) {
   const { actions } = useAnimations(animations, ref);
 
   useEffect(() => {
-    // console.log("Animation names:", Object.keys(actions));
-    // if (isRotating) {
-    //   actions["Object_0"].play();
-    // } else {
-    //   actions["Object_0"].stop();
-    // }
     actions["Object_0"].play();
   }, [actions, isRotating]);
 
 
 
   return (
+    // keep dragon directly on top of rocks scale={[0.0002, 0.0002, 0.0002]}
     <group ref={ref} {...props} dispose={null} scale={[0.003, 0.003, 0.003]}>
       <group name="Sketchfab_Scene">
         <group name="Sketchfab_model" rotation={[-Math.PI / 2, 0, 0]}>

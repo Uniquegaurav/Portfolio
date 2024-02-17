@@ -34,13 +34,13 @@ const HomeInfo = ({ currentStage }) => {
 
   return (
     homeStagesInfo[currentStage - 1].ctaText.length === 0 ? (
-      <div className="animate__animated animate__rollIn" style={commonStyle}>
+      <div className="animate__animated animate__jackInTheBox" style={commonStyle}>
       <h1 className='sm:text-base sm:leading-snug text-center py-4 px-8 text-black font-bold mx-5' >
         {homeStagesInfo[currentStage - 1].title}
       </h1>
       </div>
     ) : (
-      <div className='animate__animated animate__rollIn' style={commonStyle}>
+      <div className='animate__animated animate__jackInTheBox' style={commonStyle}>
       <h1 className='sm:text-base sm:leading-snug text-center py-4 px-8 text-blac font-bold mx-5'>
         {homeStagesInfo[currentStage - 1].title}
       </h1>
