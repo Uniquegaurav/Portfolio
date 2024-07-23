@@ -4,7 +4,6 @@ import shopify from "./shopify.png";
 import starbucks from "./starbucks.png";
 import tesla from "./tesla.png";
 import logo from "./logo.svg";
-
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";

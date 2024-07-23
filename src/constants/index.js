@@ -1,17 +1,12 @@
 import {
-  meta,
-  shopify,
   starbucks,
   tesla,
-  tripguide,
   jobit,
   carrent,
 } from "../assets/images";
 import {
-  car,
   contact,
   css,
-  estate,
   express,
   git,
   github,
@@ -21,17 +16,17 @@ import {
   mongodb,
   motion,
   mui,
-  nextjs,
   nodejs,
-  pricewise,
   react,
   redux,
-  sass,
-  snapgram,
-  summiz,
   tailwindcss,
-  threads,
-  typescript,
+  dart,
+  android,
+  flutter,
+  kotlin,
+  dagger,
+  java,
+  firebase
 } from "../assets/icons";
 
 export const skills = [
@@ -41,9 +36,38 @@ export const skills = [
     type: "Frontend",
   },
   {
-    imageUrl: express,
-    name: "Express",
-    type: "Backend",
+    imageUrl: dart,
+    name: "Dart",
+    type: "Frontend",
+  },
+  {
+    imageUrl: flutter,
+    name: "Flutter",
+    type: "Frontend",
+  },
+  {
+    imageUrl: android,
+    name: "Android",
+    type: "Frontend",
+  }, {
+    imageUrl: kotlin,
+    name: "Kotlin",
+    type: "Frontend",
+  },
+  {
+    imageUrl: java,
+    name: "Java",
+    type: "Frontend",
+  },
+  {
+    imageUrl: dagger,
+    name: "Dagger",
+    type: "Frontend",
+  },
+  {
+    imageUrl: firebase,
+    name: "Firebase",
+    type: "Frontend",
   },
   {
     imageUrl: git,
@@ -81,11 +105,6 @@ export const skills = [
     type: "Frontend",
   },
   {
-    imageUrl: nextjs,
-    name: "Next.js",
-    type: "Frontend",
-  },
-  {
     imageUrl: nodejs,
     name: "Node.js",
     type: "Backend",
@@ -101,75 +120,44 @@ export const skills = [
     type: "State Management",
   },
   {
-    imageUrl: sass,
-    name: "Sass",
-    type: "Frontend",
-  },
-  {
     imageUrl: tailwindcss,
     name: "Tailwind CSS",
     type: "Frontend",
   },
-  {
-    imageUrl: typescript,
-    name: "TypeScript",
-    type: "Frontend",
-  },
 ];
-
+export const ABOUT_TITLE = "Full-stack developer with 2+ years of experience leading the development of high-performance, scalable marketplace and banking solutions for a fin-tech startup.Expertise in Android, Flutter and ReactJS"
+export const WORK_EXP_TITLE = "Developed diverse applications using Android ,Flutter and ReactJS. Enhanced features and user experiences across projects. Managed and optimized systems for improved performance. Delivered effective solutions and collaborated with teams. Implemented best practices to ensure high-quality outcomes.."
 export const experiences = [
   {
-    title: "React.js Developer",
-    company_name: "Starbucks",
+    title: "Software Developer",
+    company_name: "CDNA TECHNOLOGIES (Nuclei)",
     icon: starbucks,
     iconBg: "#accbe1",
-    date: "March 2020 - April 2021",
+    date: "July 2022 - Current",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Spearheaded the development of a subscription marketplace from the ground up, leading to a remarkable 40-50% upsurge in Gross Merchandise Value (GMV) monthly post-launch.",
+      "Integrated the platform with various prominent banks, Live with HDFC, ICICI, HSBC, IDFC, KOTAK, and over 10 other major financial institutions.",
+      "Accounted for approximately 26% of desktop and 43% of mobile screens, developing essential features such as Transaction screen, Login/Signup Screen, User Migration, and Order Review Screen.",
+      "Implemented search and filter functionality for the listing screens and set up analytics via CleverTap, enabling data-driven insights that enhanced user experience by 12% and increased user retention by 18%.",
+      "FedMobile Android and Card Stack: Led the Credit Card SDK Team, creating essential features such as Razorpay Push Provisioning and the NCMC Wallet, which boosted functionality by 9%.",
+      "Developed the Rupay Floater Card (UPI-enabled Credit Cards), Secured Credit Card (backed by Fixed Deposit), and revamped UPI Card Controls, resulting in a 4% increase in user transaction volume.",
+      "Built QR Scanner in Android from scratch for credit card activation, addressing an issue flagged by over 1000 users.",
+      "Tools: Core Java, RxJava, Kotlin, Coroutines, Retrofit, OkHttp, Dagger Hilt, Android Architectures, JUnit, Mockito, MVVM, Jetpack libraries, Firebase, Dart, Flutter."
     ],
   },
   {
-    title: "React Native Developer",
-    company_name: "Tesla",
+    title: "Full Stack Developer",
+    company_name: "Nuclei",
     icon: tesla,
-    iconBg: "#fbc3bc",
-    date: "Jan 2021 - Feb 2022",
+    iconBg: "#fbc3bc", 
+    date: "March 2022 - June 2022",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Engineered a Contact Application on Android and Flutter platforms, enabling efficient contact management through intuitive creation, updates, and deletions",
+      "Contributed to the Federal Bank Android App by rectifying memory leaks and implementing launcher shortcuts to help users quickly start recommended tasks, benefiting over 1 million users.",
+      "Tools: Java, Fragment, Conductor, RoomDB, LeakCanary, ProGuard, Flutter, Clean Architecture, SOLID Principles.",
     ],
   },
-  {
-    title: "Web Developer",
-    company_name: "Shopify",
-    icon: shopify,
-    iconBg: "#b7e4c7",
-    date: "Jan 2022 - Jan 2023",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "Full stack Developer",
-    company_name: "Meta",
-    icon: meta,
-    iconBg: "#a2d2ff",
-    date: "Jan 2023 - Present",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
+
 ];
 
 export const socialLinks = [
@@ -189,70 +177,67 @@ export const socialLinks = [
     link: "https://www.linkedin.com/in/YourLinkedInUsername",
   },
 ];
+export const PROJECT_DESCRIPTION = "Developed a range of software projects focusing on enhancing user experience, automation, and real-time functionality. Demonstrated expertise in creating innovative solutions and robust applications across different platforms."
 
 export const projects = [
   {
-    name: "Car Rent",
+    name: "Coders League",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "Coding Platform that offers a competitive environment for practicing problems, multiple features, including functionality to create and join public coding lobbies, share real-time updates",
     tags: [
       {
-        name: "react",
+        name: "ReactJS",
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
+        name: "Redux",
         color: "green-text-gradient",
       },
       {
-        name: "tailwind",
+        name: "NodeJS",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "Express",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "MongoDB",
         color: "pink-text-gradient",
       },
     ],
     image: carrent,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://codersleague.netlify.app/#/",
   },
   {
-    name: "Job IT",
+    name: "Instagram Bot",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "Instagram bot proficient in user account management, interaction (liking, disliking, following, and unfollowing), and data extraction from varied Instagram profiles.",
     tags: [
       {
-        name: "react",
+        name: "Python",
         color: "blue-text-gradient",
       },
       {
-        name: "restapi",
+        name: "Pandas",
         color: "green-text-gradient",
       },
       {
-        name: "scss",
+        name: "BeautifulSoup",
         color: "pink-text-gradient",
       },
+      {
+        name: "Selenium",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "Webdriver",
+        color: "pink-text-gradient",
+      },
+
     ],
     image: jobit,
-    source_code_link: "https://github.com/",
-  },
-  {
-    name: "Trip Guide",
-    description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-    tags: [
-      {
-        name: "nextjs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "supabase",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/Uniquegaurav/InstaBot1",
   },
 ];
 

@@ -27,6 +27,14 @@ import contact from "./contact.svg";
 import soundon from "./soundon.png";
 import soundoff from "./soundoff.png";
 
+import kotlin from "./kotlin.png"
+import java from "./java.jpg"
+import firebase from "./firebase.png"
+import dart from "./dart.png"
+import android from "./android.png"
+import dagger from "./dagger.jpg"
+import flutter from "./flutter.png"
+
 export {
   css,
   express,
@@ -56,4 +64,11 @@ export {
   contact,
   soundon,
   soundoff,
+  kotlin,
+  java,
+  dagger,
+  firebase,
+  dart,
+  android,
+  flutter
 };
