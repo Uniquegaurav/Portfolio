@@ -268,7 +268,7 @@ export const homeStagesInfo = [
   },
   {
     title:
-      "Interested in Hiring me? or Collaborating on a Project? Feel Free To Reach Out.",
+      "Looking to hire me or collaborate on a project? Reach out anytime!",
     ctaText: "Contact Me",
     link: "/contact",
   },
