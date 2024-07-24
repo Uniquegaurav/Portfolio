@@ -4,7 +4,7 @@ import { Suspense, useEffect, useRef, useState } from "react";
 import sakura from "../assets/sakura.mp3";
 import { HomeInfo, Loader, Popup } from "../components";
 import { soundoff, soundon } from "../assets/icons";
-import { Bird, BlackIsland, Dragon, Winter, Earth } from "../models";
+import { BlackIsland, Dragon, Winter} from "../models";
 import { useNavigate } from "react-router-dom";
 import { useLocation } from 'react-router-dom';
 

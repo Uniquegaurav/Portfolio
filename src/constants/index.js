@@ -244,25 +244,25 @@ export const projects = [
 export const homeStagesInfo = [
   {
     title:
-      "Hi,I'm Gaurav, A Software Developer with Quick Learning Ability and a Passion of Creating New Things.",
+      "Hi, I'm Gaurav, a Software Developer with a quick learning curve and a passion for innovation. Experienced in developing a wide range of applications and managing the entire development lifecycle.",
     ctaText: "",
     link: "",
   },
   {
     title:
-      "I Specialize in Frontend Development with Expertise in Flutter, Android, and React JS.",
+      "I specialize in frontend development, with expertise in Android, Flutter, and React JS. My experience includes creating responsive, user-friendly interfaces and building dynamic, high-performance applications. ",
     ctaText: "See Skills",
     link: "/about",
   },
   {
     title:
-      "I am Currently Working as a Full Stack Developer at Nuclei and Building a Credit Card SDK.",
+      "I have over 2 years of experience driving the development of scalable marketplace and banking solutions for a fintech startup.",
     ctaText: "See Experience",
     link: "/about",
   },
   {
     title:
-      "Built Coders League Platform entirely from the ground up, and it's actively utilized by users.",
+      "Designed and developed the Coders League Platform from scratch, which is now actively used by a growing community of users.",
     ctaText: "See Projects",
     link: "/projects",
   },
