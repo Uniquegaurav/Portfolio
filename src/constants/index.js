@@ -245,17 +245,22 @@ export const homeStagesInfo = [
   {
     title:
       "Hi, I'm Gaurav, a Software Developer with a quick learning curve and a passion for innovation. Experienced in developing a wide range of applications and managing the entire development lifecycle.",
+      titleMobile:
+      "Hi, I'm Gaurav, a Software Developer with a quick learning curve and a passion for innovation.",
     ctaText: "",
     link: "",
   },
   {
     title:
       "I specialize in frontend development, with expertise in Android, Flutter, and React JS. My experience includes creating responsive, user-friendly interfaces and building dynamic, high-performance applications. ",
+      titleMobile :    "I specialize in frontend development, with expertise in Android, Flutter, and React JS.",
     ctaText: "See Skills",
     link: "/about",
   },
   {
     title:
+      "I have over 2 years of experience driving the development of scalable marketplace and banking solutions for a fintech startup.",
+      titleMobile:
       "I have over 2 years of experience driving the development of scalable marketplace and banking solutions for a fintech startup.",
     ctaText: "See Experience",
     link: "/about",
@@ -263,11 +268,15 @@ export const homeStagesInfo = [
   {
     title:
       "Designed and developed the Coders League Platform from scratch, which is now actively used by a growing community of users.",
+      titleMobile:
+      "Designed and developed the Coders League Platform from scratch, which is now actively used by a growing community of users.",
     ctaText: "See Projects",
     link: "/projects",
   },
   {
     title:
+      "Looking to hire me or collaborate on a project? Reach out anytime!",
+      titleMobile:
       "Looking to hire me or collaborate on a project? Reach out anytime!",
     ctaText: "Contact Me",
     link: "/contact",

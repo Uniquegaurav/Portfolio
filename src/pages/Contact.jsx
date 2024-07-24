@@ -68,6 +68,7 @@ const Contact = () => {
   };
 
   return (
+    <div className="mt-12">
     <div
       className={`xl:mt-8 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden`}
     >
@@ -90,7 +91,7 @@ const Contact = () => {
               name='name'
               value={form.name}
               onChange={handleChange}
-              placeholder="What's your good name?"
+              placeholder="Please enter your name"
               className='bg-tertiary py-4 px-6 placeholder:text-secondary text-black rounded-lg outline-none border-none font-medium'
             />
           </label>
@@ -101,7 +102,7 @@ const Contact = () => {
               name='email'
               value={form.email}
               onChange={handleChange}
-              placeholder="What's your web address?"
+              placeholder="Please enter your email"
               className='bg-tertiary py-4 px-6 placeholder:text-secondary text-black rounded-lg outline-none border-none font-medium'
             />
           </label>
@@ -112,7 +113,7 @@ const Contact = () => {
               name='message'
               value={form.message}
               onChange={handleChange}
-              placeholder='What you want to say?'
+              placeholder="Please enter your message"
               className='bg-tertiary py-4 px-6 placeholder:text-secondary text-black rounded-lg outline-none border-none font-medium'
             />
           </label>
@@ -155,6 +156,7 @@ const Contact = () => {
       </Suspense>
     </Canvas>
       </motion.div>
+    </div>
     </div>
   );
 };
