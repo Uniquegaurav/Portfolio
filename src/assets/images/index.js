@@ -8,6 +8,7 @@ import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 import gauravLogo from "./gaurav.jpeg";
+import nuclei from "./nuclei.png"
 
 export {
   hero,
@@ -20,4 +21,5 @@ export {
   jobit,
   tripguide,
   gauravLogo,
+  nuclei,
 };

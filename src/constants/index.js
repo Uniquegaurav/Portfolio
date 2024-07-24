@@ -1,9 +1,9 @@
 import {
-  starbucks,
-  tesla,
   jobit,
   carrent,
+  nuclei
 } from "../assets/images";
+
 import {
   contact,
   css,
@@ -131,7 +131,7 @@ export const experiences = [
   {
     title: "Software Developer",
     company_name: "CDNA TECHNOLOGIES (Nuclei)",
-    icon: starbucks,
+    icon: nuclei,
     iconBg: "#accbe1",
     date: "July 2022 - Current",
     points: [
@@ -148,7 +148,7 @@ export const experiences = [
   {
     title: "Full Stack Developer",
     company_name: "Nuclei",
-    icon: tesla,
+    icon: nuclei,
     iconBg: "#fbc3bc", 
     date: "March 2022 - June 2022",
     points: [
