@@ -52,7 +52,7 @@ const HomeInfo = ({ currentStage }) => {
     border: '1px solid #000',
     borderRadius: '8px',
     textDecoration: 'none',
-    padding : '18px',
+    padding : '8px',
     fontWeight: 'bold'
   };
 
@@ -61,18 +61,18 @@ const HomeInfo = ({ currentStage }) => {
   return (
     homeStagesInfo[currentStage - 1].ctaText.length === 0 ? (
       <div className="animate__animated animate__jackInTheBox" style={commonStyle}>
-        <h1 className='text-sm sm:text-base sm:leading-snug text-center py-4 px-8 text-black font-bold mx-5'>
+        <h1 className='text-xs sm:text-base sm:leading-snug text-center py-4 px-8 text-black font-bold mx-5'>
           {homeStagesInfo[currentStage - 1].title}
         </h1>
       </div>
     ) : (
       <div className='animate__animated animate__jackInTheBox' style={commonStyle}>
-        <h1 className='text-sm sm:text-base sm:leading-snug text-center py-4 px-8 text-black font-bold mx-5'>
+        <h1 className='text-xs sm:text-base sm:leading-snug text-center py-4 px-8 text-black font-bold mx-5'>
           {isMobile ? homeStagesInfo[currentStage - 1].titleMobile :  homeStagesInfo[currentStage - 1].title}
         </h1>
         <Link
           to={homeStagesInfo[currentStage - 1].link}
-          className='text-sm sm:text-base inline-flex items-center border border-black p-2 rounded-m'
+          className='text-xs sm:text-base inline-flex items-center border border-black p-2 rounded-m'
           style={isMobile? ctaBackgroundStyleMobile :ctaBackgroundStyle}s
         >
           {homeStagesInfo[currentStage - 1].ctaText}

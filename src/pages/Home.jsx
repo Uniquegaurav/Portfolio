@@ -111,7 +111,7 @@ const Home = () => {
             onJumpToAbout={handleJumpToAbout}
           />
         )}
-        <div className="absolute bottom-20 left-2.5 md:bottom-24 md:left-10 z-10 flex items-center justify-center">
+        <div className="absolute bottom-24 left-10 md:bottom-24 md:left-10 z-10 flex items-center justify-center">
           {currentStage>0 && <HomeInfo currentStage={currentStage} />}
         </div>
 
