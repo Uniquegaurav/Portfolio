@@ -48,8 +48,7 @@ const Popup = ({ onClose, onSeeHome, onJumpToAbout }) => {
           }}
         >
           <h3 className="text-center text-sm text-gray-300">
-            Drag Left and Right to Explore the World. You can always click on
-            the log to skip
+          Swipe left and right to explore. Tap the navigation icon to access the About page.
           </h3>
         </div>
         <div
@@ -66,7 +65,7 @@ const Popup = ({ onClose, onSeeHome, onJumpToAbout }) => {
             type="button"
             class="text-white bg-gradient-to-r from-teal-400 via-teal-500 to-teal-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-teal-300 dark:focus:ring-teal-800 shadow-lg shadow-teal-500/50 dark:shadow-lg dark:shadow-teal-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"
           >
-            Explore World
+            Explore The World
           </button>
 
           <button
@@ -74,7 +73,7 @@ const Popup = ({ onClose, onSeeHome, onJumpToAbout }) => {
             type="button"
             class="text-teal-400 hover:text-white border border-teal-500 hover:bg-teal-800 focus:ring-4 focus:outline-none focus:ring-teal-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-teal-500 dark:text-white dark:hover:text-white dark:hover:bg-teal-600 dark:focus:ring-teal-800"
           >
-            Skip to About
+            Skip to Main Porfolio
           </button>
         </div>
       </div>
