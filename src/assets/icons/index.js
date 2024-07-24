@@ -35,6 +35,8 @@ import android from "./android.png"
 import dagger from "./dagger.jpg"
 import flutter from "./flutter.png"
 
+import second_arrow from "./second_arrow.jpg"
+
 export {
   css,
   express,
@@ -70,5 +72,6 @@ export {
   firebase,
   dart,
   android,
-  flutter
+  flutter,
+  second_arrow,
 };

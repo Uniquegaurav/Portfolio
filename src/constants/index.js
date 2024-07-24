@@ -1,7 +1,9 @@
 import {
   jobit,
   carrent,
-  nuclei
+  nuclei,
+  insta_bot,
+  coders_league,
 } from "../assets/images";
 
 import {
@@ -206,7 +208,7 @@ export const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: carrent,
+    image: coders_league,
     source_code_link: "https://codersleague.netlify.app/#/",
   },
   {
@@ -236,7 +238,7 @@ export const projects = [
       },
 
     ],
-    image: jobit,
+    image: insta_bot,
     source_code_link: "https://github.com/Uniquegaurav/InstaBot1",
   },
 ];

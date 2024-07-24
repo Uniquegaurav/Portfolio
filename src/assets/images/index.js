@@ -9,6 +9,8 @@ import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 import gauravLogo from "./gaurav.jpeg";
 import nuclei from "./nuclei.png"
+import insta_bot from "./insta_bot.png"
+import coders_league from "./coders_league.png"
 
 export {
   hero,
@@ -22,4 +24,6 @@ export {
   tripguide,
   gauravLogo,
   nuclei,
+  insta_bot,
+  coders_league
 };
