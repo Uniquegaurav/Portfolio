@@ -99,7 +99,7 @@ const Home = () => {
     <section style={{overflow:"hidden"}} className="w-full h-screen relative">
       <Suspense
         fallback={
-          <Canvas>
+          <Canvas className="w-full h-full flex items-center justify-center">
             <Loader />{" "}
           </Canvas>
         }
