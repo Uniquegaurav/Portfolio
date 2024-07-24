@@ -40,7 +40,7 @@ const About = () => {
       }}
       transition={{ delay: index * 0.1 }}
       drag
-      className='block-container w-20 h-20 relative'
+      className='block-container w-14 h-14 sm:w-18 sm:h-18 md:w-20 md:h-20 lg:w-22 lg:h-22 xl:w-22 xl:h-22 relative'
     >
       <div className='btn-back rounded-xl' />
       <div className='btn-front rounded-xl flex justify-center items-center'>
