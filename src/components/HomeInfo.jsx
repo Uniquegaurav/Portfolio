@@ -31,7 +31,7 @@ const HomeInfo = ({ currentStage }) => {
     backgroundColor: 'rgba(173, 216, 230, 0.3)', 
     backdropFilter: 'blur(3px)', 
     border: '1px solid rgba(255, 255, 255, 0.2)', 
-    width: "310px", 
+    width: "300px", 
     height: '200px',
     margin: '0 auto',
     padding: '5px',
@@ -39,6 +39,15 @@ const HomeInfo = ({ currentStage }) => {
   };
 
   const ctaBackgroundStyle = {
+    color: '#000',
+    border: '1px solid #000',
+    borderRadius: '8px',
+    textDecoration: 'none',
+    padding : '18px',
+    fontWeight: 'bold'
+  };
+
+  const ctaBackgroundStyleMobile = {
     color: '#000',
     border: '1px solid #000',
     borderRadius: '8px',
@@ -64,7 +73,7 @@ const HomeInfo = ({ currentStage }) => {
         <Link
           to={homeStagesInfo[currentStage - 1].link}
           className='text-sm sm:text-base inline-flex items-center border border-black p-2 rounded-m'
-          style={ctaBackgroundStyle}
+          style={isMobile? ctaBackgroundStyleMobile :ctaBackgroundStyle}s
         >
           {homeStagesInfo[currentStage - 1].ctaText}
           <img src={arrow} alt='arrow' className='w-4 h-4 ml-2 object-contain' style={{ filter: 'invert(1)' }} />
