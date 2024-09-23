@@ -1,7 +1,7 @@
 import { Canvas } from "@react-three/fiber";
 import { Suspense, useEffect, useRef, useState } from "react";
 
-import sakura from "../assets/sakura.mp3";
+import rose from "../assets/rose.mp3";
 import { HomeInfo, Loader, Popup } from "../components";
 import { soundoff, soundon } from "../assets/icons";
 import { BlackIsland, Dragon, Winter} from "../models";
@@ -9,7 +9,7 @@ import { useNavigate } from "react-router-dom";
 import { useLocation } from 'react-router-dom';
 
 const Home = () => {
-  const audioRef = useRef(new Audio(sakura));
+  const audioRef = useRef(new Audio(rose));
   audioRef.current.volume = 0.4;
   audioRef.current.loop = true;
 
@@ -156,12 +156,13 @@ const Home = () => {
         </Canvas>
       </Suspense>
 
-      <div className="absolute bottom-2 left-2">
+      <div className="absolute top-4 left-10">
         <img
           src={!isPlayingMusic ? soundoff : soundon}
           alt="jukebox"
           onClick={() => setIsPlayingMusic(!isPlayingMusic)}
-          className="w-10 bg h-10 cursor-pointer object-contain"
+          className="w-10 h-10 cursor-pointer object-contain"
+          style={{ filter: 'hue-rotate(90deg) brightness(1)' }}
         />
       </div>
     </section>
