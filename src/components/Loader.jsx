@@ -4,31 +4,36 @@ const Loader = () => {
   return (
     <Html center>
       <div className='flex items-center justify-center w-full h-full'>
-        <div className='loader'>
-          <div className='inner-loader'></div>
-        </div>
+        <div className='loader'></div>
       </div>
       <style jsx>{`
         .loader {
-          width: 60px;
-          height: 60px;
-          position: relative;
-          border: 4px solid transparent; /* Transparent border */
+          width: 80px;
+          height: 80px;
           border-radius: 50%;
-          border-top-color: #3b82f6; /* Blue color for the spinner */
-          background-color: #1e3a8a; /* Dark blue for visibility */
-          animation: spin 1s linear infinite;
+          position: relative;
+          animation: spin 1.2s linear infinite;
         }
 
-        .inner-loader {
-          width: 100%;
-          height: 100%;
-          border-radius: 50%;
-          background-color: rgba(59, 130, 246, 0.8); /* Semi-transparent blue */
+        .loader:before, .loader:after {
+          content: '';
           position: absolute;
           top: 0;
           left: 0;
-          animation: pulse 1.5s infinite;
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+          animation: scale 1.2s infinite;
+        }
+
+        .loader:before {
+          background: linear-gradient(270deg, #3b82f6, #9333ea);
+          animation-delay: 0s;
+        }
+
+        .loader:after {
+          background: linear-gradient(270deg, #f59e0b, #f43f5e);
+          animation-delay: -0.6s;
         }
 
         @keyframes spin {
@@ -40,12 +45,12 @@ const Loader = () => {
           }
         }
 
-        @keyframes pulse {
+        @keyframes scale {
           0%, 100% {
             transform: scale(1);
           }
           50% {
-            transform: scale(1.2);
+            transform: scale(1.1);
           }
         }
       `}</style>
